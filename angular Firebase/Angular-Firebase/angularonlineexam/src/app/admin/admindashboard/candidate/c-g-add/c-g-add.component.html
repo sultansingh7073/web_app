@@ -1,0 +1,72 @@
+<section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>Group</h1>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">DataTables</li>
+          </ol>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header">
+              <div class="row">
+                  <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                    <h6>Add Group</h6>
+                  </div>
+              </div>
+          </div>
+          <!-- /.card-header -->
+          <form [formGroup]="group" (ngSubmit)="group_insert()">
+              <div class="card-body">
+                  <div class="container-fluid">
+                      <div>
+                          <div class="row pt-3">
+                              <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                  <div class="form-group">
+                                      <span for="usr">*Group Name</span>
+                                      <input type="text" class="form-control"  formControlName="group_name" name="group_name" [ngClass]="{ 'is-invalid': submitted && getformvalue.group_name.errors }">
+                                      <div *ngIf="submitted && getformvalue.group_name.errors" class="invalid-feedback">
+                                        <div *ngIf="getformvalue.group_name.errors.required">Group Name is required</div>
+                                      </div>  
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="row pt-3">
+                              <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                <div class="form-group">
+                                    <span for="usr">Group Details</span>
+                                    <input style="height: 100px;" type="text" class="form-control" formControlName="group_detail" name="group_detail">
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                  </div>
+              </div>
+
+              <div align="right" style="margin-right: 30px;">
+                  <button type="submit" class="btn btn-primary" style="border-radius: 0px; width: 100px;">Save</button>&nbsp;
+                  <button type="button" class="btn btn-primary" style="border-radius: 0px; width: 150px;">Save & New</button>
+              </div><br>
+          <!-- /.card-body -->
+            </form>
+        </div>
+        <!-- /.card -->
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </section>
+  <!-- /.content -->
+
+

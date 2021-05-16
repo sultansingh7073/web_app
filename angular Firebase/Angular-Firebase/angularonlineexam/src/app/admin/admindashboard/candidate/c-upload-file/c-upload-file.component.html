@@ -1,0 +1,59 @@
+<section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>Candidate</h1>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">DataTables</li>
+          </ol>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header">
+              <div class="row">
+                  <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                    <h6>Upload Candidate data file</h6>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-6 col-6" align="right">
+                      <div class="custom-control custom-switch pr-4">
+                          <input type="checkbox" class="custom-control-input" id="switch1" name="example">
+                          <label class="custom-control-label" for="switch1">Active</label>
+                      
+                      </div>
+                  </div>
+              </div>
+
+              <div class="drp_pdf dropzone" id="fileDropBox">
+                <!--<div class="drp_pdf" onclick="$('#uploadFile').click();" onkeydown="openFile(event)" >-->
+                    <img src="../assets/admindashboard/images/drop_icn.png" alt="drop_icon">
+                    <span class="smpletxt_drp" id="dropSpan1" style="display: block;">Drop a excel file here</span>
+                    <span class="smpletxt_drp" id="dropSpan2" style="display: none;"></span>
+                    <button type="button" class="drp_btn5" onclick="$('#uploadFile').click();">or select file to upload</button>
+                    <div class="main_prgrs" style="display: none;" id="FileUploadProgress">
+                            <div id="myProgress">
+                                <div id="myBar">10%</div>
+                            </div>
+                            <br>
+                    </div>
+             </div>
+
+          </div>
+               
+        </div>
+        <!-- /.card -->
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </section>
+  <!-- /.content -->

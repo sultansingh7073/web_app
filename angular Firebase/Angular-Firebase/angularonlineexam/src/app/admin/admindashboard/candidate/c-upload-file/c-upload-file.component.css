@@ -1,0 +1,58 @@
+.drp_pdf {
+    background: #f8f8f8 none repeat scroll 0 0;
+    border: 2px dashed #e1e1e1;
+    display: inline-block;
+    height: 600px;
+    text-align: center;
+    padding: 11% 0;
+    display: inline-block;
+    float: left;
+    margin-right: 0;
+    text-align: center;
+    width: auto;
+    position: absolute;
+    top: 62px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px
+}
+.drp_btn5 {
+    background: #5bb671 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 18px;
+    height: 56px;
+    margin: 15px 125px 50px;
+    width: 331px;
+}
+button {
+    -webkit-appearance: button;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    background-color: buttonface;
+    box-sizing: border-box;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+}
+.smpletxt_drp {
+    font-size: 24px;
+    color: #616161;
+    display: block;
+    text-align: center;
+}

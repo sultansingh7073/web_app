@@ -1,0 +1,50 @@
+
+<form [formGroup]="subject_form" (ngSubmit)="SubjectInsert()">
+    
+            <table border="1" align="center" width="80%">
+                <tr>
+                    <td>*SELECT SUBJECT</td>
+                    <td>*SELECT TOPIC</td>
+                    <td>*QUESTION TYPE</td>
+                    <td>LANGUAGE</td>
+                </tr>
+                <tr>
+                    <td *ngFor="let b_data of subdatealldata">
+                        <select formControlName="subject_name" name="subject_name">
+                            <option value="">Select Subject</option>
+                            <option>{{ b_data.subject_name }}</option>
+                        </select>
+                    </td>
+                    <td *ngFor="let c_data of chapterealldata"> 
+                        <select formControlName="subject_topic" name="subject_topic">
+                            <option value="">Select Topic</option>
+                            <option>{{ c_data.chapter_name }}</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select formControlName="question_type" name="question_type">
+                            <option>Select Question Type</option>
+                            <option>Multiple Choice</option>
+                            <option>Multiple Response</option>
+                            <option>True False</option>
+                            <option>Fill in the blanks</option>
+                            <option>Match Following </option>
+                            <option>Match Matrix</option>
+                            <option>Essay</option>
+                            <option>Single Digit</option>
+                            <option>Subjective</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select formControlName="language" name="language">
+                            <option value="#">LANGUAGE</option>
+                            <option>English</option>
+                            <option>Hindi</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <div align="right" style="margin-right: 30px;">
+                    <button type="submit" class="btn btn-primary" style="border-radius: 0px; width: 100px;">Save</button>
+            </div>
+</form>

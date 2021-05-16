@@ -1,0 +1,15 @@
+.file
+{
+  padding: 5px;
+  background:green; 
+  display: table;
+  font-size: 15px;
+  color: #fff;
+  border-radius: 10px;
+}
+
+
+
+input[type="file"] {
+  display: none;
+}

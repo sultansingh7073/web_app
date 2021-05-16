@@ -1,0 +1,41 @@
+body
+{
+  background-color: #DED8D7;
+}
+.container-fluid
+{
+  background-color: white;
+  width: 100%;
+  margin: 0px auto;
+}
+strong
+{
+color: #054ABD;
+font-family: Roboto;
+font-size: 14px;
+font-weight: 700;
+text-transform: capitalize;
+}
+input[class="form-control"]
+{
+border: 1px solid #ccc;
+}
+label
+{
+font-size: 1vmax;
+}
+.file
+{
+  padding: 5px;
+  background:green; 
+  display: table;
+  font-size: 15px;
+  color: #fff;
+  border-radius: 10px;
+}
+
+
+
+input[type="file"] {
+  display: none;
+}

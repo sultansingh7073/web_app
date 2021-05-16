@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="logo"></div>
+    <div class="register-item">
+      <form id="Login" #myform="ngForm" (ngSubmit)="insert()" class="form form-register">
+
+        <div class="form-field">
+              <label class="user" for="name"><span class="hidden">Name</span></label>
+              <input class="form-control" type="text" name="title" [(ngModel)]="bookname">
+        </div>
+
+        <div class="form-field">
+            <label class="user" for="name"><span class="hidden">Authur Name</span></label>
+            <input class="form-control" type="text" name="title" [(ngModel)]="authur">
+        </div><br>
+        
+        <div class="form-field">
+          <label class="user" for="name"><span class="hidden">Book Image</span></label><br>
+          <progress max="100" [value]="(uploadProgress | async)"></progress>
+          
+          <input class="form-control" (change)="upload($event)" type="file">
+      </div><br>
+
+        <div class="form-field">
+          <input type="submit" value="Add Book" >&nbsp; 
+          <button type="button" (click)="clearForm()">Reset</button>
+        </div>
+      </form>
+    </div>
+</div>
+

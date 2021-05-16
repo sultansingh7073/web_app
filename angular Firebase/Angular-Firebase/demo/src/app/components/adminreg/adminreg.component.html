@@ -1,0 +1,27 @@
+<div class="login-page">
+    <div class="form">
+    <div style="margin: 20px auto; font-size: 40px; color:green; margin-top: -30px;" ><span>SignUp Form</span></div>    
+        <form [formGroup]="loginform" (ngSubmit)="signup()">
+            <div class="formbox">
+                <div class="form-group">
+                    <input type="email" name="email" formControlName="email" class="form-control" placeholder="Email" [ngClass]="{ 'is-invalid': submitted && fval.email.errors }" />
+                    <div *ngIf="submitted && fval.email.errors" class="invalid-feedback">
+                        <div *ngIf="fval.email.errors.required" style="text-align: left;">Email is required</div>
+                        <div *ngIf="fval.email.errors.email" style="text-align: left;">Enter a valid email address</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="password" formControlName="password" class="form-control" placeholder="Password" [ngClass]="{ 'is-invalid': submitted && fval.password.errors}" />
+                    <div *ngIf="submitted && fval.password.errors"class="invalid-feedback">
+                        <div ngClass="fval.password.errors.required" style="text-align: left;">Password is required.</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary signin">Sign Up <span class="arrowbtn"><span
+                    class="fa fa-arrow-right"></span></span></button>
+                </div>
+                
+            </div>
+        </form>
+    </div>
+</div>

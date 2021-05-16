@@ -1,0 +1,12 @@
+.subjectmain {
+    border: 1px solid #ccc;
+    position: relative;
+    padding: 10px;
+}
+.subjectmain h1 {
+    background: transparent none repeat scroll 0 0;
+    color: #555;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 10px;
+}

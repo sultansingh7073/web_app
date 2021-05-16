@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container">
+  <h2>Employee Table </h2>
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th>Employee Id</th>
+        <th>Employee Name</th>
+        <th>Employee Email</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for emp in employees %}
+      <tr>
+        <td>{{ emp.eid }}</td>
+        <td>{{ emp.ename }}</td>
+        <td>{{ emp.eemail }}</td>
+        <td>
+            <a href="/edit/{{ emp.id }}"><i class="fa fa-pencil fa-2x" aria-hidden="true"></i></a>&nbsp;&nbsp;
+            <a href="/delete/{{ emp.id }}"><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i>
+</a>
+        </td>
+      </tr>
+     {% endfor %}
+    </tbody>
+  </table>
+</div>
+<center><a href="/emp" class="btn btn-primary">Add New Record</a></center>
+</body>
+</html>

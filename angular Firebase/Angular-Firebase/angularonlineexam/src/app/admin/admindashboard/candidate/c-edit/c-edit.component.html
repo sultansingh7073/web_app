@@ -1,0 +1,170 @@
+
+              <section class="content-header">
+                  <div class="container-fluid">
+                    <div class="row mb-2">
+                      <div class="col-sm-6">
+                        <h1>Candidate</h1>
+                      </div>
+                      <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                          <li class="breadcrumb-item"><a href="#">Home</a></li>
+                          <li class="breadcrumb-item active">DataTables</li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div><!-- /.container-fluid -->
+                </section>
+                <section class="content">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="card">
+                          <div class="card-header">
+                              <div class="row">
+                                  <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                    <h6>Update Candidate</h6>
+                                  </div>
+                                  <div class="col-lg-6 col-md-6 col-sm-6 col-6" align="right">
+                                      <div class="custom-control custom-switch pr-4">
+                                          <input type="checkbox" class="custom-control-input" id="switch1" name="example">
+                                          <label class="custom-control-label" for="switch1">Active</label>
+                                      
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                            <form [formGroup]="myCandidate" (ngSubmit)="UpdateCandidate()">
+                                <div *ngFor="let Candidate_data of CanFetchData; let i = index">
+                                    <div *ngIf="i < 1">
+                                        <div class="card-body">
+                                            <div class="container-fluid">
+                                                <div>
+                                                    <strong>Login Detail</strong>
+                                                    <div class="row pt-3">
+                                                        <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                                            <div class="form-group">
+                                                              <span for="usr">EMAIL ADDRESS</span>
+                                                              <input type="email" class="form-control" [ngModel]="Candidate_data.email" formControlName="email"  name="email"> 
+                                                          </div>
+                                                        </div>
+                                                        <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                                            <div class="form-group">
+                                                              <span for="usr">Name</span>
+                                                              <input type="text" class="form-control" [ngModel]="Candidate_data.name" formControlName="name"  name="name">
+                                                          </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <strong>Candidate Detail</strong>
+                                                    <div class="row pt-3">
+                                          
+                                                        <div class="col-lg-4 col-md-4 col-sm-4 col-4">
+                                                            <div class="form-group">
+                                                              <span for="usr">ENROLLMENT NUMBER</span>
+                                                              <input type="text" class="form-control" [ngModel]="Candidate_data.enroll_number" formControlName="enroll_number"  name="enroll_number" type="text"> 
+                                                              <span for="usr">GENDER </span>
+                                                              <input type="number" class="form-control" [ngModel]="Candidate_data.gender" formControlName="gender"  name="gender" type="text">
+                                                            </div>
+                                                        </div>
+                                          
+                                                        <div class="col-lg-4 col-md-4 col-sm-4 col-4">
+                                                          <div class="form-group">
+                                                              <span for="usr">MOBILE NUMBER </span>
+                                                              <input type="number" class="form-control" [ngModel]="Candidate_data.mobile" formControlName="mobile"  name="mobile" type="number">
+                                                              <span for="usr">DATE OF BIRTH</span>
+                                                              <input type="date" class="form-control" [ngModel]="Candidate_data.DOB" formControlName="DOB"  name="DOB">
+                                                            </div>
+                                                        </div>
+                                          
+                                                        <div class="col-lg-4 col-md-4 col-sm-4 col-4" align="center">
+                                                          <div class="row">
+                                                              <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                                                <div class="form-group">
+                                                                  <span for="usr">PROFILE PICTURE </span>
+                                                                  <div>
+                                                                      <img src="{{Candidate_data.image}}" width="110px" class="img-fluid mt-2 mb-3">
+                                                                      <label class="file">Choose Profile
+                                                                          <input type="file" size="60">                                                                      </label> 
+                                                                      <span style="color:red;">(Max resolution 150 × 210 px) Format(.png, .jpeg, .jpg)</span>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                              <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                                                  <div class="form-group">
+                                                                    <span for="usr">SIGNATURE </span>
+                                                                    <div style="border:1px solid #ccc; height: 170px;">
+                                                                      
+                                                                    </div>
+                                                                  </div>
+                                                              </div>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                        
+                                          
+                                                      <div class="row pt-3">
+                                                            <div class="col-lg-8 col-md-8 col-sm-8 col-8">
+                                                                <div class="form-group">
+                                                                  <span for="usr">ADDRESS</span>
+                                                                  <input type="email" class="form-control" name="address" [ngModel]="Candidate_data.address" formControlName="address" >
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 col-md-4 col-sm-4 col-4">
+                                                              <div class="form-group">
+                                                                  <span for="usr">COUNTRY</span>
+                                                                  <input type="text" class="form-control" formControlName="country" name="country" [ngModel]="Candidate_data.country">
+                                                                </div>
+                                                            </div>
+                                                      </div>
+                                          
+                                                      <div class="row pt-3">
+                                                            <div class="col-lg-4 col-md-4 col-sm-4 col-4">
+                                                                <div class="form-group">
+                                                                  <span for="usr">STATE</span>
+                                                                  <input type="text" class="form-control" formControlName="state" name="state" [ngModel]="Candidate_data.state">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 col-md-4 col-sm-4 col-4">
+                                                                <div class="form-group">
+                                                                  <span for="usr">CITY</span>
+                                                                  <input type="city" class="form-control" formControlName="city" name="city" [ngModel]="Candidate_data.city">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 col-md-4 col-sm-4 col-4">
+                                                              <div class="form-group">
+                                                                  <span for="usr">ZIPCODE </span>
+                                                                  <input type="text" class="form-control" formControlName="zipcode" name="zipcode" [ngModel]="Candidate_data.zipcode">
+                                                                </div>
+                                                            </div>
+                                                      </div><br><br>
+                                          
+                                          
+                                                      <strong></strong>
+                                                      <div class="row pt-3">
+                                                        <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                                            <div class="form-group">
+                                                              
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                          
+                                                        </div>
+                                                      </div><br>
+                                                    
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                <div align="right" style="margin-right: 30px;">
+                                    <button type="submit" class="btn btn-primary" style="border-radius: 0px; width: 100px;">Save</button>&nbsp;
+                                    <button type="button" class="btn btn-primary" style="border-radius: 0px; width: 150px;">Save & New</button>
+                                  </div><br><br>
+                            </form>
+
+                        </div>
+                      </div>
+                    </div>
+                  </section>

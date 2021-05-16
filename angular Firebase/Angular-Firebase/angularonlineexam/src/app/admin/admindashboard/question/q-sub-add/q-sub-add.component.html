@@ -1,0 +1,51 @@
+<section class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1>Question</h1>
+            </div>
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active">DataTables</li>
+              </ol>
+            </div>
+          </div>
+        </div><!-- /.container-fluid -->
+      </section>
+      
+      <!-- Main content -->
+      <section class="content">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Add Subject
+                </h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                    <form [formGroup]="subject" (ngSubmit)="SubjectInsert()">
+                        <div class="subjectmain" id="addSubjectDiv">
+                                <div class="form-group">
+                                    <h1>Enter Subject Name</h1>
+                                    <input type="text" class="form-control" placeholder="Enter Subject Name" formControlName="subject_name" name="subject_name"  [ngClass]="{ 'is-invalid': submitted && fsub.subject_name.errors }" style="border-radius: 0px;margin-top:20px;">
+                                    <div *ngIf="submitted && fsub.subject_name.errors" class="invalid-feedback" >
+                                            <div *ngIf="fsub.subject_name.errors.required" style="text-align: left;">Subject is required</div>
+                                    </div>
+                                </div>
+                                <div align="right" style="margin-right: 30px;">
+                                        <button type="submit" class="btn btn-primary" style="border-radius: 0px; width: 100px;">Save</button>
+                                </div>
+                        </div>
+                    </form>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </section>
+      <!-- /.content -->

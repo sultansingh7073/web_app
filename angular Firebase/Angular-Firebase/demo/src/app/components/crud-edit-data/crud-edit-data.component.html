@@ -1,0 +1,29 @@
+<div class="container">
+        <div class="logo"></div>
+        <div class="register-item">
+          <form class="" [formGroup]="editbook" (ngSubmit)="updatebook()" novalidate  >     
+          <div *ngFor="let b_data of bookalldata; let i = index">
+            <div *ngIf="i < 1">
+              <div class="form-group">
+                <label>Book Name:</label> 
+                  <input [ngModel]="b_data.bookname" name="bookname" type="text" formControlName="bookname" class="form-control" [ngClass]="{ 'is-invalid': submitted && getformvalue.bookname.errors }" >
+                  <div *ngIf="submitted && getformvalue.bookname.errors" class="invalid-feedback">
+                    <div *ngIf="getformvalue.bookname.errors.required">Book Name is required</div>
+                  </div>            
+              </div>
+              <div class="form-group">
+                <label>Authur Name:</label>   
+                  <input  [ngModel]="b_data.authur" name="authur" type="text" formControlName="authur"  class="form-control" [ngClass]="{ 'is-invalid': submitted && getformvalue.authur.errors }">       
+                  <div *ngIf="submitted && getformvalue.authur.errors" class="invalid-feedback">
+                    <div *ngIf="getformvalue.authur.errors.required">Authur Name is required</div>
+                  </div>
+              </div>
+            </div>  
+          </div>
+              <div class="form-group">
+                  <button class="btn btn-primary mr-1" type="submit">Update</button> &nbsp;
+                  <button class="btn btn-secondary" type="reset"  (click) = "resetForm()">Reset</button> 
+              </div>
+          </form>
+        </div>
+</div>
